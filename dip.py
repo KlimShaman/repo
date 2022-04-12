@@ -39,16 +39,10 @@ def TP_x(t, bord):
 def A1(n, g, summa, x):
     a1 = 0.0
     a_1 = 0.0
-    l = []
-    l.clear()
-    k = 0
-    fr = int(st.session_state.strlist[0])
+    fr = ls[0]
     for z in range(0, n):
-        a = int(st.session_state.strlist[z])
-        a1 += Mu(g, z) * a
+        a1 += Mu(g, z) * ls[z]
     a_1 = summa * (a1 / (fr * Mu(g, 0)))
-    strlist = []
-    strlist.clear()
     return a_1
 
 def A2(n, i, x, w, summa, p):
@@ -71,30 +65,17 @@ def A3(t, n, bord, g):
         k+=1
     return b1
 
-# n = 0
-# g = 0
-# summa = 0
-# x = 0 
-global strlist
-strlist = []
+
 st.title('Рентный калькулятор')
 st.write("Если хотите посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год:")
-st.number_input("Введите возраст человека на момент заключения договора:", key="x")
-st.number_input("Введите продолжительность временной пожизненной ренты (n):", key="n")
-st.number_input("Введите эффективную процентную годовую ставку (i):", key="g")
-st.number_input("Введите сумму, выплачиваемую раз в год в начале года:", key="summa")
+n = st.number_input("Введите возраст человека на момент заключения договора:")
+g = st.number_input("Введите продолжительность временной пожизненной ренты (n):")
+summa = st.number_input("Введите эффективную процентную годовую ставку (i):")
+x = st.number_input("Введите сумму, выплачиваемую раз в год в начале года:")
+ls = [] * n
 
-n = int(st.session_state.n)
-g = float(st.session_state.g)
-summa = int(st.session_state.summa)
-x = int(st.session_state.x)
-
-for i in range(0, 3):
-    st.text_input(f'Введите l {x + i}', key=f'ls{i}')
-    strlist.append(f'ls{i}')
-
-
-
+for i in range(0, n):
+    ls[i] = st.text_input(f'Введите l {x + i}')
 
 
 st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, g, summa, x))
