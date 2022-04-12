@@ -44,14 +44,9 @@ def A1(n, g, summa, x):
     l = []
     l.clear()
     k = 0
-    for i in range(x, x + n):
-        st.text_input('Введите l', key=f'ls{i}')
-        strlist.append(f'ls{i}')
-    print(strlist)
     for z in range(0, n):
-        a = float(st.session_state.strlist[z])
+        a = int(st.session_state.strlist[z])
         a1 += Mu(g, z) * a
-
     a_1 = summa * (a1 / (l[0] * Mu(g, 0)))
     return a_1
 
@@ -78,18 +73,27 @@ def A3(t, n, bord, g):
 # n = 0
 # g = 0
 # summa = 0
-# x = 0  
+# x = 0 
+strlist = []
 st.title('Рентный калькулятор')
 st.write("Если хотите посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год:")
+st.number_input("Введите возраст человека на момент заключения договора:", key="x")
 st.number_input("Введите продолжительность временной пожизненной ренты (n):", key="n")
 st.number_input("Введите эффективную процентную годовую ставку (i):", key="g")
 st.number_input("Введите сумму, выплачиваемую раз в год в начале года:", key="summa")
-st.number_input("Введите возраст человека на момент заключения договора:", key="x")
 
 n = int(st.session_state.n)
 g = float(st.session_state.g)
 summa = int(st.session_state.summa)
 x = int(st.session_state.x)
+
+for i in range(0, 3):
+    st.text_input(f'Введите l {x + i}', key=f'ls{i}')
+    strlist.append(f'ls{i}')
+
+
+
+
 
 st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, g, summa, x))
 #     print('Введите продолжительность временной пожизненной ренты (n): ')
