@@ -37,7 +37,7 @@ def TP_x(t, bord):
     else:
         return (0.7**t)
     
-def A1(n, g, summa, x):
+def A1(n, g, summa, x, ls):
     a1 = 0.0
     a_1 = 0.0
     fr = ls[0]
@@ -83,7 +83,7 @@ for i in range(0, n):
 while (bool == True):
     if (ls[n - 1] != 0):
         bool = False
-        st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x))
+        st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x, ls))
 
 
 #     print('Введите продолжительность временной пожизненной ренты (n): ')
