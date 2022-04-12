@@ -37,13 +37,13 @@ def TP_x(t, bord):
     else:
         return (0.7**t)
     
-def A1(n, g, summa, x, ls):
+def A1(n, g, summa, x):
     a1 = 0.0
     a_1 = 0.0
     fr = ls[0]
     for z in range(0, n):
         a1 += Mu(g, z) * ls[z]
-    a_1 = summa * (a1 / (fr * Mu(g, 1)))
+    a_1 = summa * (a1 / (fr * Mu(g, 0)))
     return a_1
 
 def A2(n, i, x, w, summa, p):
@@ -75,13 +75,13 @@ ip = st.number_input("Введите эффективную процентную
 summa = st.number_input("Введите сумму, выплачиваемую раз в год в начале года:")
 global ls
 ls = [0] * n
-bool = True
-
 for i in range(0, n):
-    ls[i] = st.number_input(f'Введите l {x + i}', disabled = True)
+    ls[i] = st.number_input(f'Введите l {x + i}')
 
 
-st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x, ls))
+st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x))
+
+
 
 
 #     print('Введите продолжительность временной пожизненной ренты (n): ')
