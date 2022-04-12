@@ -39,12 +39,15 @@ def TP_x(t, bord):
 def A1(n, g, summa, x):
     a1 = 0.0
     a_1 = 0.0
+    strlist = []
+    strlist.clear()
     l = []
     l.clear()
     k = 0
     for i in range(x, x + n):
-        st.text_input('Введите l', key=f'{x}')
-        a = float(st.session_state.f'ls{x}'))
+        st.text_input('Введите l', key=f'ls{x}')
+        strlist.append(f'ls{x}')
+        a = float(st.session_state.strlist[x])
         l.append(a)
     for i in range(x, x + n):
         a1 += Mu(g, i) * l[k]
