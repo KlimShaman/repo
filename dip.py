@@ -39,15 +39,16 @@ def TP_x(t, bord):
 def A1(n, g, summa, x):
     a1 = 0.0
     a_1 = 0.0
-    strlist = []
-    strlist.clear()
     l = []
     l.clear()
     k = 0
+    fr = int(st.session_state.strlist[0])
     for z in range(0, n):
         a = int(st.session_state.strlist[z])
         a1 += Mu(g, z) * a
-    a_1 = summa * (a1 / (l[0] * Mu(g, 0)))
+    a_1 = summa * (a1 / (fr * Mu(g, 0)))
+    strlist = []
+    strlist.clear()
     return a_1
 
 def A2(n, i, x, w, summa, p):
@@ -74,7 +75,7 @@ def A3(t, n, bord, g):
 # g = 0
 # summa = 0
 # x = 0 
-strlist = []
+global strlist = []
 st.title('Рентный калькулятор')
 st.write("Если хотите посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год:")
 st.number_input("Введите возраст человека на момент заключения договора:", key="x")
