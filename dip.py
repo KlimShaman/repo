@@ -47,6 +47,7 @@ def A1(n, g, summa, x):
     for i in range(x, x + n):
         st.text_input('Введите l', key=f'ls{i}')
         strlist.append(f'ls{i}')
+    print(strlist)
     for z in range(0, n):
         a = float(st.session_state.strlist[z])
         a1 += Mu(g, z) * a
