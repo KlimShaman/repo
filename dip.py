@@ -75,14 +75,17 @@ ip = st.number_input("Введите эффективную процентную
 summa = st.number_input("Введите сумму, выплачиваемую раз в год в начале года:")
 global ls
 ls = [0] * n
+bool = True
 
 for i in range(0, n):
     ls[i] = st.number_input(f'Введите l {x + i}')
 
-time.sleep(30)
+while (bool = True):
+    if (ls[n - 1] != 0):
+        bool = False
+        st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x))
 
 
-st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x))
 #     print('Введите продолжительность временной пожизненной ренты (n): ')
 #     n = int(input())
 #     print('Введите эффективную процентную годовую ставку (i): ')
