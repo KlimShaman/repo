@@ -43,7 +43,7 @@ def A1(n, g, summa, x):
     l.clear()
     k = 0
     for i in range(x, x + n):
-        st.text_input('Введите l', key="ls")
+        st.text_input('Введите l', key=f'{x}')
         a = float(st.session_state.ls)
         l.append(a)
     for i in range(x, x + n):
