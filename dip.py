@@ -49,11 +49,9 @@ def A1(n, g, summa, x):
         strlist.append(f'ls{i}')
     for z in range(0, n):
         a = float(st.session_state.strlist[z])
-        l.append(a)
-    for i in range(x, x + n):
-        a1 += Mu(g, i) * l[k]
-        k+=1
-    a_1 = summa * (a1 / (l[0] * Mu(g, x)))
+        a1 += Mu(g, z) * a
+
+    a_1 = summa * (a1 / (l[0] * Mu(g, 0)))
     return a_1
 
 def A2(n, i, x, w, summa, p):
