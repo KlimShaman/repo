@@ -6,10 +6,6 @@ import streamlit as st
 
 st.title('My first app 132')
 
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
-
 def Mu(i, n):      
     mu = (1+i)**(-n)
     return mu
