@@ -80,6 +80,10 @@ bool = True
 for i in range(0, n):
     ls[i] = st.number_input(f'Введите l {x + i}')
 
+while (bool == True):
+    print(A1(n, ip, summa, x, ls))
+    time.sleep(0.5)
+
 st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x, ls))
 
 
