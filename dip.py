@@ -70,21 +70,21 @@ def A3(t, n, bord, g):
         b1 += l[k]*TP_x(i, bord)*Mu(g, i)
         k+=1
     return b1
-n = 0
-g = 0
-summa = 0
-x = 0 
+# n = 0
+# g = 0
+# summa = 0
+# x = 0 
 st.title('Рентный калькулятор')
 st.write("Если хотите посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год:")
-st.text_input("Введите продолжительность временной пожизненной ренты (n):", key=n)
-st.text_input("Введите эффективную процентную годовую ставку (i):", key=g)
-st.text_input("Введите сумму, выплачиваемую раз в год в начале года:", key=summa)
-st.text_input("Введите возраст человека на момент заключения договора:", key=x)
+st.text_input("Введите продолжительность временной пожизненной ренты (n):", key="prod")
+st.text_input("Введите эффективную процентную годовую ставку (i):", key="eff")
+st.text_input("Введите сумму, выплачиваемую раз в год в начале года:", key="sum")
+st.text_input("Введите возраст человека на момент заключения договора:", key="age")
 
-n = int(st.session_state.n)
-g = float(st.session_state.g)
-summa = int(st.session_state.summa)
-x = int(st.session_state.x)
+n = int(st.session_state.prod)
+g = float(st.session_state.eff)
+summa = int(st.session_state.sum)
+x = int(st.session_state.age)
 
 st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, g, summa, x))       
 
