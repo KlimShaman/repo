@@ -54,18 +54,13 @@ def A2(n, i, x, w, summa, p):
     return a_22
 
 def A3(t, n, bord, g):
-    l = []
-    l.clear()
-    k=0
-    b1=0
+    k = 0
+    b1 = 0
     for i in range(t, t + n):
-        print('Введите сколько выплачивает перестраховочная компания в момент t =', i,':')
-        a=float(input())
-        l.append(a)
-    for i in range(t, t + n):
-        b1 += l[k]*TP_x(i, bord)*Mu(g, i)
-        k+=1
+        b1 += ls2[k]*TP_x(i, bord)*Mu(g, i)
+        k += 1
     return b1
+
 
 
 try:
@@ -103,7 +98,10 @@ try:
         bord = int(st.number_input("Введите больше скольки лет не может прожить человек:"))
         n = math.ceil(bord) - t
         g = float(st.number_input("Введите эффективную процентную годовую ставку (i):"))
-
+        global ls2
+        ls2 = [0] * n
+        for i in range(0, n):
+            ls2[i] = st.number_input(f'Введите сколько выплачивает перестраховочная компания в момент t = {i + t}:')
         st.write('Актуарная современная стоимость обязательств перестраховочной компании =', A3(t, n, bord, g))
 
         
