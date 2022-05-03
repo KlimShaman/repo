@@ -70,8 +70,8 @@ def A3(t, n, bord, g):
 st.title('Рентный калькулятор')
 
 add_selectbox = st.sidebar.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone')
+    'Какую задачу вы хотите решить??',
+    ('Посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год', 'Home phone', 'Mobile phone')
 )
 
 st.write("Если хотите посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год:")
