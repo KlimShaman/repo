@@ -56,7 +56,7 @@ def A2(n, i, x, w, summa, p):
 def A3(t, n, bord, g):
     k = 0
     b1 = 0
-    for i in range(t, t + n + 1):
+    for i in range(t, n + 1):
         b1 += ls2[k]*TP_x(i, bord)*Mu(g, i)
         k += 1
     return b1
