@@ -56,7 +56,7 @@ def A2(n, i, x, w, summa, p):
 def A3(t, n, bord, g):
     k = 0
     b1 = 0
-    for i in range(t, t + n):
+    for i in range(t, t + n + 1):
         b1 += ls2[k]*TP_x(i, bord)*Mu(g, i)
         k += 1
     return b1
@@ -100,7 +100,7 @@ try:
         g = float(st.number_input("Введите эффективную процентную годовую ставку (i):"))
         global ls2
         ls2 = [0] * n
-        for i in range(0, n):
+        for i in range(0, n + 1):
             ls2[i] = st.number_input(f'Введите сколько выплачивает перестраховочная компания в момент t = {i + t}:')
         st.write('Актуарная современная стоимость обязательств перестраховочной компании =', A3(t, n, bord, g))
 
