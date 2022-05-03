@@ -108,10 +108,10 @@ try:
 
         
         
-except IndexError:
-    pass
-except ZeroDivisionError:
-    pass
+# except IndexError:
+#     pass
+# except ZeroDivisionError:
+#     pass
     
 
 
