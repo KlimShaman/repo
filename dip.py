@@ -88,7 +88,7 @@ try:
 
         st.write('Актуарная современная стоимость временной пожизненной ренты =', A1(n, ip, summa, x))
 except IndexError:
-    continue
+    pass
     
 
 
