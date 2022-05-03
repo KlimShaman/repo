@@ -68,6 +68,12 @@ def A3(t, n, bord, g):
 
 
 st.title('Рентный калькулятор')
+
+add_selectbox = st.sidebar.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone')
+)
+
 st.write("Если хотите посчитать современную стоимость полной пожизненной ренты, выплачиваемой раз в год:")
 x = int(st.number_input("Введите возраст человека на момент заключения договора:"))
 n = int(st.number_input("Введите продолжительность временной пожизненной ренты (n):"))
