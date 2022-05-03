@@ -79,9 +79,9 @@ if (option == 'Посчитать современную стоимость по
     n = int(st.number_input("Введите продолжительность временной пожизненной ренты (n):"))
     ip = st.number_input("Введите эффективную процентную годовую ставку (i):")
     summa = st.number_input("Введите сумму, выплачиваемую раз в год в начале года:")
+    global ls
     ls = [0] * n
     for i in range(0, n):
-        global ls
         ls[i] = st.number_input(f'Введите l {x + i}')
 
 
