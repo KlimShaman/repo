@@ -97,7 +97,7 @@ try:
 
         st.write('Современная стоимость полной пожизненной ренты, выплачиваемой раз в заданный период =', A2(n, g, x, w, summa, p))
         
-except IndexError:
+except IndexError or ZeroDivisionError:
     pass
     
 
