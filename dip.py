@@ -64,7 +64,7 @@ def A3(t, n, bord, g):
 
 
 try:
-    st.title('Рентный калькулятор')
+    st.title('Рентный калькулято $x + y$')
 
     option = st.selectbox(
         'Какую задачу вы хотите решить?',
