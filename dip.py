@@ -171,7 +171,7 @@ try:
          pl = int(st.number_input("Введите ежемесячный платеж:"))
          per = int(st.number_input("Введите период выплаты пенсии(в годах):"))
          st.write('Пенсия (руб/мес) =', A4(age, age2, per, pl))
-    elif (option == 'Посчитать временную будущую пенсию'):
+    elif (option == 'Посчитать пожизненную будущую пенсию'):
          age = int(st.number_input("Введите ваш возраст:"))
          pl = int(st.number_input("Введите ежемесячный платеж:"))
          pv = int(st.number_input("Введите первоначальный взнос:"))
