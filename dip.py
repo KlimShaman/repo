@@ -70,7 +70,6 @@ def A4(age, age2, per, pl):
     percent = 0.067
     delta = (age2 - age) * 12
     for i in range(delta):
-        print(summa3)
         summa3 = summa3 * (1 + percent/12)
         summa3 += pl
     otvet = summa3 / (12 * per)
