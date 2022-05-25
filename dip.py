@@ -72,7 +72,7 @@ def A4(age, age2, per, pl):
     for i in range(delta):
         summa3 += summa3 * (1 + percent/12)
         summa3 += 5000
-    otvet = summa3 / (12 * (age2 - age1))
+    otvet = summa3 / (12 * (age2 - age))
     return otvet
     
     
