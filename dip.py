@@ -76,7 +76,7 @@ def A4(age, age2, per, pl):
     return otvet
 
 def A5(age, pensage, pl, pv):
-    dozh = 115
+    dozh = 270
     summa3 = pl + pv
     percent = 0.067
     delta = (pensage - age) * 12
