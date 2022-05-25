@@ -84,6 +84,7 @@ def A5(age, pensage, pl, pv):
         print(summa3)
         summa3 = summa3 * (1 + percent/12)
         summa3 += pl
+    print(summa3)
     otvet = summa3 / dozh
     return otvet
     
